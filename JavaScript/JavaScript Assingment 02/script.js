@@ -16,9 +16,9 @@ if (numberpnz > 0) {
 var numberoe = Number(prompt("Give some Number"));
 
 if (numberoe % 2 === 0 ) {
-    alert ("Even")
+    alert ("Even");
 }else{
-    alert("Odd")
+    alert("Odd");
 }
 
 // Excersise 3
@@ -26,9 +26,9 @@ if (numberoe % 2 === 0 ) {
 var userAge = Number(prompt("Your Age"));
 
 if (userAge >= 18) {
-    alert("Your are elgible for voting")
+    alert("Your are elgible for voting");
 } else {
-    alert("You are not elgible for voting")
+    alert("You are not elgible for voting");
 }
 
 // Excersise 4 
@@ -69,7 +69,7 @@ if (userName === "admin" && userPassword === "12345") {
 var studentMarks = Number(prompt("Your obtianed marks"));
 
 if (studentMarks >= 90) {
-    alert("A Grad")
+    alert("A Grad");
 }else if (studentMarks >= 80) {
     alert("B Grad");
 }else if (studentMarks >= 70) {
