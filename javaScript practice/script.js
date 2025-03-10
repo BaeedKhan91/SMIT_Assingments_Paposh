@@ -178,44 +178,44 @@
 // }
 
 
-let books =[
-    {
-        title : "javascript",
-        author : "john mulder",
-        price : 1000
-    },
-    {
-        title : "python",
-        author : "mithchel",
-        price : 500
-    },
-    {
-        title : "java",
-        author : "williamson",
-        price : 400
-    },
-    {
-        title : "c++",
-        author : "klassen",
-        price : 1500
-    },
-    {
-        title : "Swift",
-        author : "tom latham",
-        price : 500
-    }   
+// let books =[
+//     {
+//         title : "javascript",
+//         author : "john mulder",
+//         price : 1000
+//     },
+//     {
+//         title : "python",
+//         author : "mithchel",
+//         price : 500
+//     },
+//     {
+//         title : "java",
+//         author : "williamson",
+//         price : 400
+//     },
+//     {
+//         title : "c++",
+//         author : "klassen",
+//         price : 1500
+//     },
+//     {
+//         title : "Swift",
+//         author : "tom latham",
+//         price : 500
+//     }   
     
-]
+// ]
 
-let cheepbooks =[];
+// let cheepbooks =[];
 
-for(let i =0; i < books.length ;i ++){
-    if(books[i].price < 500){
-        cheepbooks.push(books[i])
-    }
-}
+// for(let i =0; i < books.length ;i ++){
+//     if(books[i].price < 500){
+//         cheepbooks.push(books[i])
+//     }
+// }
 
-console.log(cheepbooks);
+// console.log(cheepbooks);
 
 
 
