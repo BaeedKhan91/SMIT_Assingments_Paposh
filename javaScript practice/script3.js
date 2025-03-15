@@ -56,14 +56,78 @@
 //     }
     
 
-let firstD = +prompt("Age kia hai tumhari");
+// let firstD = +prompt("Age kia hai tumhari");
 
-let brothers = +prompt("kitne bhai hai tere ");
+// let brothers = +prompt("kitne bhai hai tere ");
 
-if (brothers === 0) {
+// if (brothers === 0) {
        
-}
+// }
 // let secondD = +prompt("Second number");
 
-
 // console.log(firstD+secondD);
+
+
+
+// let students = [
+//     {
+//         name: "ahmed",
+//         marks: 65
+//     },
+//     {
+//         name: "ali",
+//         marks: 95
+//     },
+//     {
+//         name: "umar",
+//         marks: 46
+//     },
+//     {
+//         name: "asad",
+//         marks: 78
+//     }
+// ]
+
+
+// // console.log("Passed students");
+
+// let sum = 0;
+
+// let highstMarks = students[0].marks;
+// let topper = students[0];
+
+
+// for(let i = 0; i<students.length; i++){
+//     if (students[i].marks >= 50) {
+        
+//         console.log(students[i]);
+        
+//     }
+//     sum += students[i].marks 
+
+//     if (students[i].marks > highstMarks) {
+//         highstMarks = students[i].marks;
+//         topper = students[i]
+//     }
+// }
+
+// let avg = sum / students.length
+
+
+// console.log("Sum of marks " + sum);
+// console.log("Average " + avg);
+
+// // console.log("highest marks " + highstMarks);
+// // console.log("topper "+ topper.name);
+
+
+// console.log(topper.name + " got the higher marks " +highstMarks);
+
+
+
+
+
+
+
+
+
