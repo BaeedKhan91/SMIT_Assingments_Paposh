@@ -125,9 +125,46 @@
 
 
 
+// let cart = [];
+
+// while (true){
+//     let userResponse = prompt("Do you want to add a product in the cart yes/no").toLowerCase();
+//     if (userResponse === "no") {
+//         break
+//     }else if(userResponse === "yes"){
+//         let userProduct = prompt("which product you have to add");
+//         cart.push(userProduct);
+       
+
+//     }
+//     else{
+//         alert("envalid response please enter yes or no ");
+//     }
+
+// }
+
+
+// console.log(cart);
+let userItems = [];
+
+for (let i =0; i<5; i++){
+
+  
+ userItems.push(prompt("enter your favorite item"))   
+} 
+
+for(let i =0; i< userItems.length;i++){
+    
+    if (userItems[i] === "pizza") {
+        console.log(userItems[i] + "i also like this");
+        
+    }
+}
 
 
 
 
+
+// console.log(userItems);
 
 
