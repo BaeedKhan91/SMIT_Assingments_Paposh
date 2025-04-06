@@ -58,7 +58,7 @@ var products = [
       {
         id: 2,
         user: "Zubair",
-        rating: 4.7,
+        rating: 4.5,
         title: "Very Good Product",
         comments: "zubair It is a very good product ....",
         date: "05-02-2021",
@@ -104,7 +104,6 @@ var products = [
     ],
   },
 ];
-
 
 
 // //   1. Find a Product by ID
@@ -222,8 +221,36 @@ var products = [
 // }
 
 
-for (let i = 0; i < products.length; i++) {
-  for (let v = 0; v < products[i].variations.length; i++) {
-    
-  }
-}
+// // 8. Find the Most Expensive Variation of Each Product
+
+// for (let i = 0; i < products.length; i++) {
+//   let expensiveVariation = 0;
+//   let expensiveProduct = null;
+//   let expensiveColor = null
+//   for (let v = 0; v < products[i].variations.length; v++) {
+//     // console.log(`${products[i].title} is color ${products[i].variations[v].color} ${products[i].variations[v].price}`);
+//     if (products[i].variations[v].price > expensiveVariation) {
+//       expensiveVariation = products[i].variations[v].price
+//       expensiveProduct = products[i]
+//       expensiveColor = products[i].variations[v].color
+//     }
+
+//   }
+//   console.log(`ProductId ${expensiveProduct.id } = ${expensiveProduct.title} - ${expensiveColor} (${expensiveVariation})`);
+
+// }
+
+
+// // 9. Calculate Total Stock Value
+
+// let sumOfPrice = 0;
+// let qtyOfAllVaraition = 0;
+// for (let i = 0; i < products.length; i++) {
+//   for (let v = 0; v < products[i].variations.length; v++) {
+//     sumOfPrice += products[i].variations[v].price
+//     qtyOfAllVaraition += products[i].variations[v].quantity
+//   }
+// }
+// let totalStock = sumOfPrice * qtyOfAllVaraition ;
+
+// console.log(totalStock);
