@@ -33,3 +33,79 @@
 
 
 
+
+// // Exercise 3: Maximum of Three Numbers
+// // Write a function that returns the largest of three numbers.
+
+// function findMax(a = 0, b = 0, c = 0) {
+//     if (a >= b && a >= c) {
+//         return a
+//     }
+//     else if (b >= a && b >= c) {
+//         return b
+//     }
+//     else {
+//         return c
+//     }
+
+// }
+
+// let result = findMax(20,15, 9);
+
+// console.log(result);
+
+
+
+
+// // Exercise 4: String Repeater
+// // Create a function that takes a string and a number n, and returns the string repeated n times.
+
+// function repeatStr (str = "Hello World" , n = 1){
+//     let repeated = ""
+//     for(let i = 0; i < n; i++){
+//         repeated += str
+//     }
+//     return repeated
+// }
+
+// let result = repeatStr ("hello");
+
+// console.log(result);
+
+
+
+// // Exercise 5: Simple Object Return
+// // Write a function that takes a name and age, and returns an object with those values.
+
+
+// function createPerson (name, age){
+//     let personObj = {
+//         name : name,
+//         age : age,
+//     }
+//     return personObj
+// }
+
+// let result = createPerson("ali" , 18);
+
+// console.log(result);
+
+
+
+// // Exercise 6: Array Sum
+// // Create a function that takes an array of numbers and returns the sum of all elements.
+
+
+// function arraySum (arr){
+//     let sum = 0
+//     for(let i = 0 ; i < arr.length; i++){
+//         sum += arr[i]
+//     }
+ 
+
+//     return sum
+// }
+
+// let result = arraySum([2,4,6,5,8,15,54,6546]);
+
+// console.log(result);
