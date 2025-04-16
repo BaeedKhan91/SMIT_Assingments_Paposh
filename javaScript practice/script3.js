@@ -145,21 +145,21 @@
 
 
 // console.log(cart);
-let userItems = [];
+// let userItems = [];
 
-for (let i =0; i<5; i++){
+// for (let i =0; i<5; i++){
 
   
- userItems.push(prompt("enter your favorite item"))   
-} 
+//  userItems.push(prompt("enter your favorite item"))   
+// } 
 
-for(let i =0; i< userItems.length;i++){
+// for(let i =0; i< userItems.length;i++){
     
-    if (userItems[i] === "pizza") {
-        console.log(userItems[i] + "i also like this");
+//     if (userItems[i] === "pizza") {
+//         console.log(userItems[i] + " i also like this");
         
-    }
-}
+//     }
+// }
 
 
 

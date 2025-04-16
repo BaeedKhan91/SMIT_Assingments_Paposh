@@ -109,3 +109,5 @@
 // let result = arraySum([2,4,6,5,8,15,54,6546]);
 
 // console.log(result);
+
+
