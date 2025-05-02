@@ -28,22 +28,24 @@
       text-align: center;
       padding: 50px;
     }
-    input, textarea, button {
+    input, button {
       padding: 10px;
       font-size: 16px;
       margin: 10px;
-      width: 90%;
-      max-width: 600px;
+      width: 300px;
     }
     #qrcode {
       margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   </style>
 </head>
 <body>
 
-  <h1>QR Code for Product Info</h1>
-  <textarea id="text" rows="6">🍃 Product Name: Green Mango Juice | 📦 Net Volume: 800ml | 🏭 Manufactured by: baba Frozen Food | 🌍 Country of Origin: Made in Pakistan | 📍 Location: Porbandar Colony 5 1/2 Badia Town Karachi | 📞 Contact: 0323-2471495</textarea>
+  <h1>QR Code Generator</h1>
+  <input type="text" id="text" placeholder="Enter text or URL" />
   <br>
   <button onclick="generateQRCode()">Generate QR Code</button>
   <div id="qrcode"></div>
@@ -52,23 +54,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
   <script>
+    let qrCode;
     function generateQRCode() {
       const text = document.getElementById("text").value.trim();
       const qrContainer = document.getElementById("qrcode");
       qrContainer.innerHTML = ""; // Clear previous QR
 
       if (text !== "") {
-        new QRCode(qrContainer, {
+        qrCode = new QRCode(qrContainer, {
           text: text,
           width: 200,
           height: 200
         });
       } else {
-        alert("Please enter text.");
+        alert("Please enter text or URL.");
       }
     }
   </script>
 
 </body>
 </html>
-

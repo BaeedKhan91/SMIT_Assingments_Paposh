@@ -106,151 +106,150 @@ var products = [
 ];
 
 
-// //   1. Find a Product by ID
+//   1. Find a Product by ID
 
-//   let userInput = Number(prompt("give product id"));
+  let userInput = Number(prompt("give product id"));
 
-//   for(let i =0 ; i < products.length; i++){
-//     if (userInput === products[i].id) {
-//         console.log(products[i]);
+  for(let i =0 ; i < products.length; i++){
+    if (userInput === products[i].id) {
+        console.log(products[i]);
 
-//     }
-//   }
-
-
-// // 2. List All Product Titles
-
-//   for(let i = 0 ;i< products.length ; i++){
-//     console.log(products[i].title);
-
-//   }
+    }
+  }
 
 
-// // 3. Find Available Colors of a Product
+// 2. List All Product Titles
+
+  for(let i = 0 ;i< products.length ; i++){
+    console.log(products[i].title);
+
+  }
 
 
-// let userId = Number(prompt("Product Id").trim());
-
-// for(let i = 0; i< products.length; i++){
-//     if (userId === products[i].id) {
-//       for(let v = 0; v < products[i].variations.length; v++){
-//         console.log(products[i].variations[v].color);
-
-//       }
-//     }
-// }
+// 3. Find Available Colors of a Product
 
 
+let userId = Number(prompt("Product Id").trim());
 
-// // 4. Get Total Quantity of a Product
+for(let i = 0; i< products.length; i++){
+    if (userId === products[i].id) {
+      for(let v = 0; v < products[i].variations.length; v++){
+        console.log(products[i].variations[v].color);
 
-// let productId = Number(prompt("product Id"));
-// let sum = 0
-
-
-// for(let i = 0 ;i< products.length; i++){
-//   if (productId === products[i].id) {
-//     for(let v =0; v< products[i].variations.length; v++){
-//       sum += products[i].variations[v].quantity
-//     }
-//   }
-// }
-
-// console.log(`Total Quantity:${sum}`);
+      }
+    }
+}
 
 
 
-// // 5. Filter Products with Low Stock
+// 4. Get Total Quantity of a Product
 
-// // debugger
-// // let lessStockProducts = [];
-
-// for(let i = 0; i< products.length; i++){
-//   for(let v =0 ;v< products[i].variations.length; v++){
-//     if (products[i].variations[v].quantity < 2) {
-//       console.log(products[i].title);
-//       // lessStockProducts.push(products[i])
-
-//     }
-//   }
-// }
+let productId = Number(prompt("product Id"));
+let sum = 0
 
 
-// // console.log(lessStockProducts);
+for(let i = 0 ;i< products.length; i++){
+  if (productId === products[i].id) {
+    for(let v =0; v< products[i].variations.length; v++){
+      sum += products[i].variations[v].quantity
+    }
+  }
+}
+
+console.log(`Total Quantity:${sum}`);
 
 
 
-// // 6. Find the Highest Rated Product
+// 5. Filter Products with Low Stock
 
-// let highestavgRating = 0;
-// let highestRatedProduct =null;
+// debugger
+// let lessStockProducts = [];
 
+for(let i = 0; i< products.length; i++){
+  for(let v =0 ;v< products[i].variations.length; v++){
+    if (products[i].variations[v].quantity < 2) {
+      console.log(products[i].title);
+      // lessStockProducts.push(products[i])
 
-// for (let i = 0; i < products.length; i++) {
-//   let sumOfReviews = 0;
-//   let totalReviews = products[i].reviews.length
-//   // debugger
-//   for (let r = 0; r < products[i].reviews.length; r++){
-//     sumOfReviews += products[i].reviews[r].rating
-
-//   }
-//   let avgRating = sumOfReviews / totalReviews
-//   // console.log(`Avg rating of ${products[i].title} is ${avgRating}`);
-
-//   if ( avgRating >  highestavgRating ) {
-//     highestavgRating = avgRating
-//     highestRatedProduct = products[i]
-//   }
+    }
+  }
+}
 
 
-// }
-
-// // console.log(highestRatedProduct);
-// console.log(`Highest Rated Product: ${highestRatedProduct.title}`);
+// console.log(lessStockProducts);
 
 
-// // 7. Filter Active Reviews for a Product
 
-// for (let i = 0; i < products.length; i++) {
-//   for (let r = 0; r < products[i].reviews.length; r++) {
-//     if (products[i].reviews[r].status === true) {
-//       console.log(products[i].reviews[r]);
+// 6. Find the Highest Rated Product
 
-//     }
-//   }
-// }
+let highestavgRating = 0;
+let highestRatedProduct =null;
 
 
-// // 8. Find the Most Expensive Variation of Each Product
+for (let i = 0; i < products.length; i++) {
+  let sumOfReviews = 0;
+  let totalReviews = products[i].reviews.length
+  // debugger
+  for (let r = 0; r < products[i].reviews.length; r++){
+    sumOfReviews += products[i].reviews[r].rating
 
-// for (let i = 0; i < products.length; i++) {
-//   let expensiveVariation = 0;
-//   let expensiveProduct = null;
-//   let expensiveColor = null
-//   for (let v = 0; v < products[i].variations.length; v++) {
-//     // console.log(`${products[i].title} is color ${products[i].variations[v].color} ${products[i].variations[v].price}`);
-//     if (products[i].variations[v].price > expensiveVariation) {
-//       expensiveVariation = products[i].variations[v].price
-//       expensiveProduct = products[i]
-//       expensiveColor = products[i].variations[v].color
-//     }
+  }
+  let avgRating = sumOfReviews / totalReviews
+  // console.log(`Avg rating of ${products[i].title} is ${avgRating}`);
 
-//   }
-//   console.log(`ProductId ${expensiveProduct.id } = ${expensiveProduct.title} - ${expensiveColor} (${expensiveVariation})`);
-
-// }
+  if ( avgRating >  highestavgRating ) {
+    highestavgRating = avgRating
+    highestRatedProduct = products[i]
+  }
 
 
-// // 9. Calculate Total Stock Value
+}
+// console.log(highestRatedProduct);
+console.log(`Highest Rated Product: ${highestRatedProduct.title}`);
 
-// let sumOfPrice = 0;
-// let qtyOfAllVaraition = 0;
-// for (let i = 0; i < products.length; i++) {
-//   for (let v = 0; v < products[i].variations.length; v++) {
-//     sumOfPrice += products[i].variations[v].price
-//     qtyOfAllVaraition += products[i].variations[v].quantity
-//   }
-// }
-// let totalStock = sumOfPrice * qtyOfAllVaraition ;
 
-// console.log(totalStock);
+// 7. Filter Active Reviews for a Product
+
+for (let i = 0; i < products.length; i++) {
+  for (let r = 0; r < products[i].reviews.length; r++) {
+    if (products[i].reviews[r].status === true) {
+      console.log(products[i].reviews[r]);
+
+    }
+  }
+}
+
+
+// 8. Find the Most Expensive Variation of Each Product
+
+for (let i = 0; i < products.length; i++) {
+  let expensiveVariation = 0;
+  let expensiveProduct = null;
+  let expensiveColor = null
+  for (let v = 0; v < products[i].variations.length; v++) {
+    // console.log(`${products[i].title} is color ${products[i].variations[v].color} ${products[i].variations[v].price}`);
+    if (products[i].variations[v].price > expensiveVariation) {
+      expensiveVariation = products[i].variations[v].price
+      expensiveProduct = products[i]
+      expensiveColor = products[i].variations[v].color
+    }
+
+  }
+  console.log(`ProductId ${expensiveProduct.id } = ${expensiveProduct.title} - ${expensiveColor} (${expensiveVariation})`);
+
+}
+
+
+// 9. Calculate Total Stock Value
+
+let sumOfPrice = 0;
+let qtyOfAllVaraition = 0;
+for (let i = 0; i < products.length; i++) {
+  for (let v = 0; v < products[i].variations.length; v++) {
+    sumOfPrice += products[i].variations[v].price
+    qtyOfAllVaraition += products[i].variations[v].quantity
+  }
+}
+let totalStock = sumOfPrice * qtyOfAllVaraition ;
+
+console.log(totalStock);
