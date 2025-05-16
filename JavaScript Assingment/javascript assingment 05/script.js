@@ -105,6 +105,11 @@ var products = [
   },
 ];
 
+// {
+// name : "Baeed Khan",
+// rollNo : 343045
+// }
+
 // Question 1
 
 // console.log(products.map((m)=> m.title));
