@@ -112,7 +112,7 @@ var products = [
 
 // Question 2
 
-// console.log(products.map((m)=> m.variations.filter((v)=>v.color === "black")).filter((v)=>v.length > 0))
+// console.log(products.filter((m)=> m.variations.filter((v)=>v.color === "black").length > 0))
 
 
 // Question 3
@@ -122,28 +122,75 @@ var products = [
 
 // console.log(totalStock);
 
+// Question 4
+
+//   let avgRating = products.map((m)=>{
+//     let trueReviews = m.reviews.filter((f)=> f.status === true)
+//     let totalRating = trueReviews.reduce((acc,curr)=> acc + curr.rating ,0)
+//     return{
+//       title : m.title,
+//       averageRating :   totalRating / trueReviews.length
+//     }
+//   })
+// console.log(avgRating);
 
 // Question 5
 
-// let goodRating = products.map((m)=> m.reviews.filter((f)=> f.rating === 5.0)).filter((v)=> v.length > 0)
+// let goodRating = products.filter((m)=> m.reviews.filter((f)=> f.rating === 5.0).length > 0)
 // console.log(goodRating);
 
 // Question 6
 
 // let ques6 = products.map((m)=> {
-//   let title =[];
-//   title.push(m.title)
-//   title.push(m.variations)
-//   return title;
+//  return{
+//   title : m.title,
+//   variations : m.variations
+//  }
 // })
 
 // console.log(ques6);
 
 
-let totalRevenue = products.reduce((acc,curr)=>{
-  return acc + curr.variations.reduce((acc,curr)=>{
-    return acc + (curr.price * curr.quantity)
-  },0)
-},0)
 
-console.log(totalRevenue);
+// // Question 7
+
+// let totalRevenue = products.reduce((acc,curr)=>{
+//   return acc + curr.variations.reduce((acc,curr)=>{
+//     return acc + (curr.price * curr.quantity)
+//   },0)
+// },0)
+
+// console.log(totalRevenue);
+
+
+// Question 8
+
+// let ques8 = products.filter((e)=>e.variations.filter((f)=> f.quantity > 5).length > 0)
+
+// Question 9
+
+// console.log(ques8);
+
+
+// let ques9 = products.map((m)=> {
+//   return{
+//     title : m.title,
+//     variations : m.variations.length,
+//     totalReviews : m.reviews.length
+//   }
+
+// })
+// console.log(ques9);
+
+
+
+// Question 10
+
+// let ques10 = products.map((m)=> {
+// return{
+//   title: m.title,
+//   totalStock : m.variations.reduce((acc,curr)=> acc + curr.quantity,0)
+// }
+// }).reduce((acc,curr) =>    acc.totalStock > curr.totalStock ? acc : curr )
+
+// console.log(ques10);
