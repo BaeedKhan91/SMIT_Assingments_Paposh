@@ -1,74 +1,69 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-
-    <script src="./script.js"></script>
-    <script src="./script2.js"></script>
-    <script src="./script3.js"></script>
-    <script src="./script4.js"></script>
-    <script src="./script5.js"></script>
-    <script src="./script6.js"></script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>QR Code Generator</title>
+  <title>Image to QR Code</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
+      padding: 30px;
     }
-    input, button {
+    input[type="file"], button {
+      margin: 10px;
       padding: 10px;
       font-size: 16px;
-      margin: 10px;
-      width: 300px;
+    }
+    #preview {
+      margin: 20px auto;
+      max-width: 300px;
     }
     #qrcode {
       margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   </style>
 </head>
 <body>
 
-  <h1>QR Code Generator</h1>
-  <input type="text" id="text" placeholder="Enter text or URL" />
+  <h2>Upload Image and Generate QR Code</h2>
+
+  <input type="file" id="imageInput" accept="image/*">
+  <br>
+  <img id="preview" src="" alt="Image Preview" style="display: none;">
   <br>
   <button onclick="generateQRCode()">Generate QR Code</button>
+
   <div id="qrcode"></div>
 
-  <!-- QRCode.js library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
   <script>
-    let qrCode;
-    function generateQRCode() {
-      const text = document.getElementById("text").value.trim();
-      const qrContainer = document.getElementById("qrcode");
-      qrContainer.innerHTML = ""; // Clear previous QR
+    let imageUrl = "";
 
-      if (text !== "") {
-        qrCode = new QRCode(qrContainer, {
-          text: text,
-          width: 200,
-          height: 200
-        });
-      } else {
-        alert("Please enter text or URL.");
+    document.getElementById('imageInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        imageUrl = URL.createObjectURL(file);
+        const img = document.getElementById('preview');
+        img.src = imageUrl;
+        img.style.display = 'block';
       }
+    });
+
+    function generateQRCode() {
+      if (!imageUrl) {
+        alert("Please upload an image first.");
+        return;
+      }
+
+      const qrContainer = document.getElementById("qrcode");
+      qrContainer.innerHTML = ""; // Clear previous
+
+      new QRCode(qrContainer, {
+        text: imageUrl,
+        width: 200,
+        height: 200
+      });
     }
   </script>
 

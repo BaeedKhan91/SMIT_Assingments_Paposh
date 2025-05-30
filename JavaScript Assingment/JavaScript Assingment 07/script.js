@@ -1,24 +1,34 @@
-const addBtn = document.querySelector("#add-task")
+const addBtn = document.querySelector("#add-task");
+const ul = document.querySelector(".ul");
 
+addBtn.addEventListener("click", () => {
+    const input = document.querySelector("#input");
+    if (input.value === "") {
+        alert("Please Write Some Task");
+    } else {
+        const li = document.createElement("li");
+        const spanC = document.createElement("span");
+        spanC.classList.add("checkbox");
+        const spanD = document.createElement("span");
+        spanD.classList.add("delete");
 
-let task = [];
+        spanC.innerHTML = `<i class="fa-solid fa-check"></i>`;
+        spanD.innerHTML = `<i class="fa-solid fa-trash"></i>`;
 
-const list = document.querySelector("ul")
+        li.textContent = input.value;
+        li.appendChild(spanC);
+        li.appendChild(spanD);
+        ul.appendChild(li);
+        input.value = "";
+    }
+});
 
-addBtn.addEventListener("click", ()=>{
-    const input = document.getElementById("input").value
-    task.push(input)
-    rendering()
-    console.log(task);
-    
-})
+ul.addEventListener("click", (e) => {
+    if (e.target.parentElement.classList.contains("delete")) {
+        e.target.parentElement.parentElement.remove();
+    }
 
-let btn = document.querySelector("#button")
-
-
-
-
-function rendering (){
-    list.innerHTML = task.map((e) => `<li>  ${btn} ${e} 🗑️ </li>`).join("")
-}
-list.style.listStyle = "none"
+    else if (e.target.parentElement.classList.contains("checkbox")) {
+        e.target.parentElement.parentElement.classList.toggle("checked");
+    }
+});
