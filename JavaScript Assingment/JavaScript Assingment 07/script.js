@@ -11,11 +11,9 @@ addBtn.addEventListener("click", () => {
         spanC.classList.add("checkbox");
         const spanD = document.createElement("span");
         spanD.classList.add("delete");
-
         spanC.innerHTML = `<i class="fa-solid fa-check"></i>`;
         spanD.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-
-        li.textContent = input.value;
+        li.innerHTML = input.value;
         li.appendChild(spanC);
         li.appendChild(spanD);
         ul.appendChild(li);
