@@ -31,6 +31,21 @@ h1{
     font-family:sans-serif ;
     font-weight: 800;
 }
+.searchInput{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* border: 1px solid red; */
+    gap: 0;
+}
+.search-form {
+    width: 100%;
+    /* border: 2px solid black */
+}
+.search-form input {
+    width: 100%;
+    border: 1px solid black !important
+}
 .input-btn{
     display: flex;
     gap: 5px;
@@ -43,11 +58,13 @@ h1{
 }
 
 .input-btn button{
+    font-family:sans-serif ;
     border-radius: 7px;
     border: none;
     background-color: #029bd9;
     padding: 7px 10px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .ul{
@@ -67,6 +84,14 @@ ul li{
     cursor: pointer;
     font-size: 16px;
     transition: font-size 0.2s ease;
+}
+.ul li span i.check{
+
+    font-size: 18px;
+}
+.ul li span i.check:hover{
+
+    font-size: 20px;
 }
 .ul li span i:hover{
     font-size: 18px;
