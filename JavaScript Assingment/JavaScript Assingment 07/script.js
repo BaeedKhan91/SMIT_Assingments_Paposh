@@ -112,9 +112,9 @@ searchInput.addEventListener("keyup",()=>{
 
 
 function saveData () {
-    localStorage.setItem("data" , ul.innerHTML)
+    localStorage.setItem("listData" , ul.innerHTML)
 }
 function getData (){
-    ul.innerHTML = localStorage.getItem("data")
+    ul.innerHTML = localStorage.getItem("listData")
 }
 getData()
