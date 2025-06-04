@@ -1,6 +1,7 @@
 const addBtn = document.querySelector("#add-task");
 const ul = document.querySelector(".ul");
 const submitForm = document.querySelector("#submit-form")
+const searchInput = document.querySelector(".search-form input")
 
 let editindex = null
 submitForm.addEventListener("submit", () => {
@@ -9,7 +10,7 @@ submitForm.addEventListener("submit", () => {
     const items = ul.children
     if (editindex !== null) {
         const li = items[editindex]
-        li.textContent = input.value
+        li.textContent = input.value.trim().toLowerCase();
         const spanC = document.createElement("span");
         spanC.classList.add("checkbox");
         const spanD = document.createElement("span");
@@ -17,6 +18,7 @@ submitForm.addEventListener("submit", () => {
         const spanE = document.createElement("span")
         spanE.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`
         spanE.classList.add("edit");
+        
         
 
         const spanM = document.createElement("span")
@@ -50,7 +52,7 @@ submitForm.addEventListener("submit", () => {
         const spanM = document.createElement("span")
         spanC.innerHTML = `<i class="fa-solid check fa-check"></i>`;
         spanD.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-        li.innerHTML = input.value;
+        li.innerHTML = input.value.trim().toLowerCase();
         spanM.appendChild(spanE)
         spanM.appendChild(spanC);
         spanM.appendChild(spanD);
@@ -90,6 +92,23 @@ ul.addEventListener("click", (e) => {
         saveData()
     }
 });
+
+searchInput.addEventListener("keyup",()=>{
+    const items = ul.children
+    const text = searchInput.value.trim().toLowerCase();
+    for(let i = 0;  i < items.length; i++){
+        const item = items[i]
+        const isMatch = item.textContent.includes(text)
+        if (!isMatch) {
+            item.classList.add("filtered")
+        }else{
+            item.classList.remove("filtered")
+        }
+        
+    }
+    
+    
+})
 
 
 function saveData () {

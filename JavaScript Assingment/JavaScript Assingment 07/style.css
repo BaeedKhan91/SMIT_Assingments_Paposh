@@ -98,6 +98,10 @@ ul li{
     /* transition: ease-in; */
 }
 
+.filtered{
+    display: none;
+}
+
 @media (max-width: 385px) {
     .sub-container{
         padding: 15px;
