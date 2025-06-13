@@ -45,7 +45,7 @@ submitForm.addEventListener("submit", () => {
         const spanD = document.createElement("span");
         spanD.classList.add("delete");
         const spanE = document.createElement("span")
-        spanE.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`
+         spanE.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`
         spanE.classList.add("edit");
         
 
