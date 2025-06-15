@@ -1,0 +1,22 @@
+/* Quiz Section Background */
+#quiz-section {
+  background-color: #f1f9ff; /* light blue */
+}
+
+/* Submit Button Styling */
+.custom-submit-btn {
+  background-color: #007b5e; /* a good matching dark green */
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+  background-color: #005945;
+}
+
+/* Optional: Better spacing between radio buttons */
+.form-check {
+  margin-bottom: 8px;
+}

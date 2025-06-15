@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container my-4">
+    <h1 class="text-center mb-4">Quiz App</h1>
+
+    <div id="result" class="text-center mb-4 d-none" >
+      You are <span id="score" style="font-size: 60px;">80%</span> correct
+    </div>
+
+    <div id="quiz-section" class="p-4 rounded ">
+<form id="quiz-form">
+
+  <div class="mb-4">
+    <p><strong>Q1.</strong> What is the capital of France?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" value="a" id="q1a">
+      <label class="form-check-label" for="q1a">a. Berlin</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" value="b" id="q1b">
+      <label class="form-check-label" for="q1b">b. Madrid</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q1" value="c" id="q1c">
+      <label class="form-check-label" for="q1c">c. Paris</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q2.</strong> Who developed the theory of relativity?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" value="a" id="q2a">
+      <label class="form-check-label" for="q2a">a. Isaac Newton</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" value="b" id="q2b">
+      <label class="form-check-label" for="q2b">b. Albert Einstein</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q2" value="c" id="q2c">
+      <label class="form-check-label" for="q2c">c. Galileo Galilei</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q3.</strong> Which language runs in a web browser?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="a" id="q3a">
+      <label class="form-check-label" for="q3a">a. Java</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="b" id="q3b">
+      <label class="form-check-label" for="q3b">b. Python</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q3" value="c" id="q3c">
+      <label class="form-check-label" for="q3c">c. JavaScript</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q4.</strong> What does HTML stand for?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" value="a" id="q4a">
+      <label class="form-check-label" for="q4a">a. Hyper Trainer Marking Language</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" value="b" id="q4b">
+      <label class="form-check-label" for="q4b">b. HyperText Markup Language</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q4" value="c" id="q4c">
+      <label class="form-check-label" for="q4c">c. HighText Machine Language</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q5.</strong> Which planet is known as the Red Planet?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" value="a" id="q5a">
+      <label class="form-check-label" for="q5a">a. Jupiter</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" value="b" id="q5b">
+      <label class="form-check-label" for="q5b">b. Mars</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q5" value="c" id="q5c">
+      <label class="form-check-label" for="q5c">c. Venus</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q6.</strong> Who is the founder of Microsoft?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q6" value="a" id="q6a">
+      <label class="form-check-label" for="q6a">a. Steve Jobs</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q6" value="b" id="q6b">
+      <label class="form-check-label" for="q6b">b. Mark Zuckerberg</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q6" value="c" id="q6c">
+      <label class="form-check-label" for="q6c">c. Bill Gates</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q7.</strong> What is the boiling point of water?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q7" value="a" id="q7a">
+      <label class="form-check-label" for="q7a">a. 100°C</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q7" value="b" id="q7b">
+      <label class="form-check-label" for="q7b">b. 50°C</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q7" value="c" id="q7c">
+      <label class="form-check-label" for="q7c">c. 80°C</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q8.</strong> CSS is used for:</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q8" value="a" id="q8a">
+      <label class="form-check-label" for="q8a">a. Structuring web pages</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q8" value="b" id="q8b">
+      <label class="form-check-label" for="q8b">b. Styling web pages</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q8" value="c" id="q8c">
+      <label class="form-check-label" for="q8c">c. Hosting websites</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q9.</strong> What is the largest mammal?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q9" value="a" id="q9a">
+      <label class="form-check-label" for="q9a">a. Elephant</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q9" value="b" id="q9b">
+      <label class="form-check-label" for="q9b">b. Giraffe</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q9" value="c" id="q9c">
+      <label class="form-check-label" for="q9c">c. Blue Whale</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <p><strong>Q10.</strong> Which is a JavaScript framework?</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q10" value="a" id="q10a">
+      <label class="form-check-label" for="q10a">a. Django</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q10" value="b" id="q10b">
+      <label class="form-check-label" for="q10b">b. React</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="q10" value="c" id="q10c">
+      <label class="form-check-label" for="q10c">c. Laravel</label>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn custom-submit-btn px-5 py-2">Submit</button>
+  </div>
+
+</form>
+
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
