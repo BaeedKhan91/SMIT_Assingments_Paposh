@@ -23,7 +23,7 @@ submitForm.addEventListener("submit", (e) => {
         addBtn.innerHTML = "ADD Todo"
         editindex = null
         input.value = ""
-        // saveData()
+        // saveData()2
     } else {
 
         const input = document.querySelector("#input");
