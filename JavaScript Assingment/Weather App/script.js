@@ -11,8 +11,6 @@ const weatherIcons = {
     "Showers": "./shower.png",
     "Thunderstorms": "./thunderstorm.png",
     "Snow": "./snow.png",
-    "Fog": "./foggy.png",
-    "Clear": "./clear.png"
 };
 form.addEventListener("submit",(e)=>{
     let input = document.querySelector("#input")
@@ -23,7 +21,8 @@ form.addEventListener("submit",(e)=>{
     const tempF = document.querySelector(".fara")
     const tempC = document.querySelector(".cel")
     const weatherIcon =  document.querySelector(".weather-icon")
-    let city = input.value
+    // let city = localStorage.getItem("city") || input.value
+    // localStorage.setItem("city",city)
     
     e.preventDefault()
     console.dir(weatherIcon)
