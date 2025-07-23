@@ -8,7 +8,7 @@ const weatherIcons = {
     "Mostly cloudy": "./mostly cloudy.png",
     "Partly cloudy": "./partly cloudy.png",
     "Rain": "./rain.png",
-    "Showers": "./shower.png",
+    "Showers": "./shower.webp",
     "Thunderstorms": "./thunderstorm.png",
     "Snow": "./snow.png",
 };
@@ -21,15 +21,48 @@ form.addEventListener("submit",(e)=>{
     const tempF = document.querySelector(".fara")
     const tempC = document.querySelector(".cel")
     const weatherIcon =  document.querySelector(".weather-icon")
+    let city = input.value
     // let city = localStorage.getItem("city") || input.value
     // localStorage.setItem("city",city)
     
     e.preventDefault()
-    console.dir(weatherIcon)
+    // console.dir(weatherIcon)
  fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?q=${city}&apikey=${API_KEY}`).then(response => response.json().then((data) => {
         let cityData = data[0]
         // console.log(cityData);
         return fetch(`http://dataservice.accuweather.com/currentconditions/v1/${cityData.Key}?apikey=${API_KEY}`).then(response => response.json().then((data)=>{
+               const forecastContainer = document.querySelector(".forecast-container");
+
+fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityData.Key}?apikey=${API_KEY}&metric=true`)
+    .then(response => response.json())
+    .then((forecastData) => {
+        forecastContainer.innerHTML = ""; // Clear old forecast
+
+        forecastData.DailyForecasts.forEach(day => {
+            const date = new Date(day.Date);
+            const weekday = date.toLocaleDateString('en-US', { weekday: 'short' });
+            const iconPhrase = day.Day.IconPhrase;
+            const maxTemp = day.Temperature.Maximum.Value;
+            const minTemp = day.Temperature.Minimum.Value;
+            console.log(day.Temperature.Minimum);
+            
+            const weatherIcon = weatherIcons[iconPhrase] || "./default.png";
+
+            const card = document.createElement("div");
+            card.classList.add("forecast-card");
+card.innerHTML = `
+    <p class="forecast-date">${weekday}</p>
+    <img src="${weatherIcon}" alt="${iconPhrase}" class="forecast-icon">
+    <div class="forecast-temps">
+        <p class="min-temp">Min: ${minTemp}°C</p>
+        <p class="max-temp">Max: ${maxTemp}°C</p>
+    </div>
+`;
+
+            forecastContainer.appendChild(card);
+        });
+    });
+
             let currenData = data[0]     
             cityname.innerHTML = city
             weatherText.innerHTML = currenData.WeatherText

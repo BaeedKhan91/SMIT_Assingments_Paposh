@@ -86,3 +86,66 @@ body{
     margin-top: -6px;
     text-align: center;
 }
+
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.forecast-card {
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    width: 100px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    background-color: #444444;
+}
+
+.forecast-date {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.forecast-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.forecast-temp {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+.forecast-temps {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.min-temp, .max-temp {
+    font-size: 13px;
+    color: #dddddd;
+}
+
+.min-temp {
+    color: #84c1ff; /* bluish tone for min */
+}
+
+.max-temp {
+    color: #ff8c8c; /* reddish tone for max */
+}
