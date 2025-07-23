@@ -149,3 +149,20 @@ body{
 .max-temp {
     color: #ff8c8c; /* reddish tone for max */
 }
+
+@media(max-width: 466px){
+    .search input{
+      padding: 5px 15px;
+    height: 40px;  
+    font-size: 16px;     
+    margin-right: 10px;
+    }
+    .search button{
+        height: 40px;
+        width: 40px;
+    }
+    .search button i{
+        width: 10px;
+        font-size: 15px;
+    }
+}
