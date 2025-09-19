@@ -4,70 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-
-    </style>
-
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style></style>
   </head>
   <body>
+    <div class="container">
+      <form id="signup-form">
+        <h2>Create Account</h2>
+        <input type="email" id="signup-email" placeholder="Email" required />
+        <input
+          type="password"
+          id="signup-password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Sign Up</button>
+        <span class="toggle-link" onclick="toggleForms('login')"
+          >Already have an account? Login</span
+        >
+      </form>
 
-   
-    
-   
+      <form id="login-form" style="display: none">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input
+          type="password"
+          id="login-password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Login</button>
+        <span class="toggle-link" onclick="toggleForms('signup')"
+          >Don't have an account? Sign Up</span
+        >
+      </form>
 
-<div class="container">
- 
-    <form id="signup-form">
-      <h2>Create Account</h2>
-      <input type="email" id="signup-email" placeholder="Email" required>
-      <input type="password" id="signup-password" placeholder="Password" required>
-      <button type="submit">Sign Up</button>
-      <span class="toggle-link" onclick="toggleForms('login')">Already have an account? Login</span>
-    </form>
-
-   
-    <form id="login-form" style="display:none;">
-      <h2>Login</h2>
-      <input type="email" id="login-email" placeholder="Email" required>
-      <input type="password" id="login-password" placeholder="Password" required>
-      <button type="submit">Login</button>
-      <span class="toggle-link" onclick="toggleForms('signup')">Don't have an account? Sign Up</span>
-    </form>
-
-  <div id="dashboard">
-     <div class="container-todo"> 
-        <div class="sub-container-todo">
-
+      <div id="dashboard">
+        <div class="container-todo">
+          <div class="sub-container-todo">
             <h1>Todo List</h1>
-            <div class="searchInput input-btn">
-                <form action="" class="search-form">
-                    <input type="text" id="searchInput" placeholder="Search Todo">
-                    
-                </form>
-            </div>
-            <ul class="ul">
-           
-            </ul>
-            <div class="input-btn">
-                <form action="" id="submit-form">
-
-                    <input type="text" placeholder="Type a task" id="input">
-                    <button id="add-task">Add Todo</button>
-                </form>
-            </div>
+            <button id="logout-btn">LogOut</button>
+            <form action="" id="submit-form">
+              <div class="titleInput">
+                <input type="text" id="searchInput" placeholder="Enter Title" />
+              </div>
+              <div class="input-btn">
+                <textarea
+                  name=""
+                  placeholder=" Type a content"
+                  id="input"
+                ></textarea>
+                <button id="add-task">Add Todo</button>
+              </div>
+            </form>
+          </div>
+          <ul class="ul"></ul>
         </div>
-    </div>
+      </div>
 
-    <!-- <input type="text" id="title">
+      <!-- <input type="text" id="title">
     <textarea name="" id="content"></textarea>
     
     <button id="get-btn">Get Data</button>
     <button id="update-btn">Update Data</button>
     <button id="add-btn">Add Data</button> -->
-
-  </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="./script.js"></script>
   </body>
