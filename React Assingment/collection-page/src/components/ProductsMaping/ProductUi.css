@@ -1,11 +1,18 @@
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
 .product-card {
   width: 300px;
   margin: 40px auto;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #646464;
+  background-color: rgba(0, 0, 0, 0.176);
   border-radius: 10px;
   text-align: center;
   font-family: Arial, sans-serif;
+  
 }
 
 .product-name {

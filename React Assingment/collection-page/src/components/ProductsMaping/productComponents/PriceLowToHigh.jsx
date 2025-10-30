@@ -7,7 +7,7 @@ function PriceLowToHigh(props) {
 
   return (
     <>
-     <h3 style={{textAlign:"center"}}>Show all products by sorting on price (low high)</h3>
+     <h3 style={{textAlign:"center" ,fontSize:"26px"}}>Show all products by sorting on price (low high)</h3>
      <Productui resultProducts = {lowToHigh}/>
       
     </>

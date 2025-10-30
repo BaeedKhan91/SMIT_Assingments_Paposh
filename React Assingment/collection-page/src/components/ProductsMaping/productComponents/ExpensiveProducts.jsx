@@ -9,7 +9,7 @@ function ExpensiveProducts(props) {
 
   return (
     <>
-    <h3 style={{textAlign:"center"}}> Show top 3 most expensive products</h3>
+    <h3 style={{textAlign:"center", fontSize:"26px"}}> Show top 3 most expensive products</h3>
       <ProductUi resultProducts={top3Product}/>
       
     </>
