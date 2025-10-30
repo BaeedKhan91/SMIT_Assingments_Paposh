@@ -2,21 +2,39 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHistory } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./Calculator.css";
+
+
 function Calculator() {
   const [value, setValue] = useState("");
   const [history, setHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
-  const number = (e) => setValue(value + e.target.value);
+  let slicedValue = "";
+  
+
+  const number = (e) => {
+    const newValue = e.target.value;
+    if (value === "" && newValue === "0") return;
+    setValue(value + newValue);
+  };
   const deleteAll = () => setValue("");
   const deleteLast = () => setValue(value.toString().slice(0, -1));
   const clearHistory = () => setHistory([]);
   const showHicon = () => setShowHistory(!showHistory);
   const calculate = () => {
-    let eValue = eval(value);
-    setHistory([...history, `${value} = ${eValue}`]);
-    setValue(eval(value));
+    value.toString().charAt(0) === "0"
+      ? (slicedValue = value.slice(1))
+      : (slicedValue = value);
+    let eValue = eval(slicedValue);
 
-    console.log(history);
+    validation(slicedValue, eValue);
+  };
+  const validation = (slicedValue, eValue) => {
+    if (slicedValue === undefined || eValue === undefined) {
+      return;
+    } else {
+      setHistory([...history, `${slicedValue} = ${eValue}`]);
+      setValue(eValue);
+    }
   };
 
   return (
@@ -24,7 +42,7 @@ function Calculator() {
       <div className="container">
         <div className="calculator">
           <p className="history-icon" onClick={showHicon}>
-            H
+            <FontAwesomeIcon icon={faHistory} size="1x" />
           </p>
           <div className="display">
             <input type="text" id="result" disabled value={value} />
@@ -83,7 +101,7 @@ function Calculator() {
               +
             </button>
 
-            <button value={"0"} onClick={number} className="white">
+            <button value={"0"} onClick={number}>
               0
             </button>
             <button value={"."} onClick={number}>

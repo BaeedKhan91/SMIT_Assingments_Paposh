@@ -10,6 +10,7 @@
 }
 
 .calculator {
+  position: relative;
   background-color: #1c1c1c;
   height: 70%;
   padding: 20px;
@@ -21,9 +22,12 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 .history-icon {
-  text-align: left;
-  color: wheat;
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  color: rgba(255, 255, 255, 0.664);
   cursor: pointer;
+  font-size: 21px;
 }
 
 .display {
@@ -93,7 +97,7 @@ button:hover {
 .history-container {
   background-color: #2a2a2a;
   border-radius: 15px;
-  padding: 15px;
+  padding: 5px 15px 15px 15px;
   width: 220px;
   height: 300px;
   overflow-y: auto;
@@ -103,9 +107,10 @@ button:hover {
 }
 
 .history-container h3 {
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: #ff9500;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .history-list p {
@@ -119,6 +124,12 @@ button:hover {
   color: #ff9500;
   font-weight: 600;
 }
+
+.history-container::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 .clear-history {
   width: 100%;
