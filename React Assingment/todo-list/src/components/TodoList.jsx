@@ -6,6 +6,7 @@ function TodoList({ todos, handleToggle, handleEdit, handleDelete }) {
     <ul className="space-y-3">
       {todos.map((todo) => (
         <TodoItem
+          key={todo.id}
           todo={todo}
           handleToggle={handleToggle}
           handleDelete={handleDelete}
