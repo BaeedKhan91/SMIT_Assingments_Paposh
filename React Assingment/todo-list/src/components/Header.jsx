@@ -12,7 +12,7 @@ function Header({searchTodo , setSearchTodo , handleSelect , options }) {
         <div className="flex items-center w-full border border-[#6b63ff62] rounded-lg px-3 py-2">
           <input
             type="text"
-            placeholder="Search note..."
+            placeholder="Search todo..."
             className="w-full bg-transparent outline-none text-sm "
             value={searchTodo}
             onChange={(e) => setSearchTodo(e.target.value)}

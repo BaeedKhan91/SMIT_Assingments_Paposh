@@ -7,9 +7,7 @@ import Add from "./components/Add";
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Task# 1", isdone: false },
-    { id: 2, text: "Task# 2", isdone: true },
-    { id: 3, text: "Task# 3", isdone: false },
+
   ]);
   const [showPopup, setShowPopup] = useState(false);
   const [editedId, setEditedId] = useState("");
@@ -17,7 +15,7 @@ function App() {
   const [searchTodo, setSearchTodo] = useState("");
   const [options, setOptions] = useState("All");
 
-  
+
   function handleAddTodo() {
     setShowPopup(true);
   }
