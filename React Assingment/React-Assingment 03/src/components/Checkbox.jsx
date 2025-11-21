@@ -1,7 +1,7 @@
 const Checkbox = ({ id, text, checked, ...props }) => {
   return (
-    <div className={`relative flex items-center `}>
-      <div className="flex items-center h-5 ">
+    <div className="relative flex items-center flex-wrap sm:flex-nowrap">
+      <div className="flex items-center h-5">
         <input
           id={id}
           type="checkbox"
@@ -12,11 +12,15 @@ const Checkbox = ({ id, text, checked, ...props }) => {
       </div>
 
       {text && (
-        <label htmlFor={id} className="ml-3 text-md cursor-pointer font-medium">
+        <label
+          htmlFor={id}
+          className="ml-2 sm:ml-3 text-sm sm:text-md cursor-pointer font-medium"
+        >
           {text}
         </label>
       )}
     </div>
   );
 };
+
 export default Checkbox;

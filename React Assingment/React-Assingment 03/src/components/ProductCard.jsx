@@ -1,12 +1,28 @@
+import { Link } from "react-router";
 function ProductCard({ product }) {
-
   return (
-    <div className="col-span-3">
+    <div className="
+      col-span-12 
+      sm:col-span-6 
+      md:col-span-4 
+      lg:col-span-3
+    ">
       <div className="rounded-xl shadow-xl">
         <div className="flex flex-col">
-          <img src={product.image} alt={product.title} />
+          
+          <Link to={`/collection/${product.id}`}>
+          <img 
+            src={product.image} 
+            alt={product.title} 
+            className="w-full h-48 sm:h-56 md:h-60 lg:h-64 object-cover"
+            />
+            </Link>
+
           <div className="relative p-3 space-y-2 h-56 text-black bg-neutral-50">
-            <h1 className="text-[18px] font-bold text-shadow-md">{product.title}</h1>
+            <h1 className="text-[18px] font-bold text-shadow-md">
+              {product.title}
+            </h1>
+
             <div className="flex items-center gap-2 font-semibold">
               <div className="flex justify-start">
                 {[1, 2, 3, 4, 5].map((m, i) => (
@@ -34,9 +50,10 @@ function ProductCard({ product }) {
               ({product.rating})
             </div>
 
-            <p className="max-h-24 overflow-hidden font-medium ">
+            <p className="max-h-24 overflow-hidden font-medium">
               {product.description}
             </p>
+
             <div className="absolute bottom-2 w-full flex justify-between items-center pr-6">
               <span className="text-black text-xl font-bold">${product.price}</span>
               <button className="cursor-pointer transition-all duration-1000 ease-in-out">
@@ -56,6 +73,7 @@ function ProductCard({ product }) {
                 </svg>
               </button>
             </div>
+
           </div>
         </div>
       </div>

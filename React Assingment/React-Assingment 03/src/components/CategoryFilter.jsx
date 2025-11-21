@@ -4,9 +4,16 @@ import Checkbox from "./Checkbox";
 function CategoryFilter({ selectedCategory, onChangeCategory }) {
   return (
     <>
-      <div className="text-black rounded-md py-2 px-4 shadow-lg">
-        <h3 className="font-bold">Category filter</h3>
-        <div className="mt-3 space-y-2" id="categoryFilter">
+      <div className="
+        text-black rounded-md py-2 px-4 shadow-lg
+        sm:py-3 sm:px-4
+      ">
+        <h3 className="font-bold text-base sm:text-lg">Category filter</h3>
+
+        <div
+          className="mt-3 space-y-2 sm:space-y-3"
+          id="categoryFilter"
+        >
           {categoryTitle.map((category, i) => (
             <Checkbox
               text={category}

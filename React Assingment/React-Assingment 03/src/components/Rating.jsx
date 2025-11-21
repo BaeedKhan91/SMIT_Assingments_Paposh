@@ -1,18 +1,16 @@
 export default function Rating({ ratingValue, isSelected }) {
-  // console.log(ratingValue);
-
   return (
     <div className="flex justify-start">
       {[1, 2, 3, 4, 5].map((i) => (
         <svg
           key={i}
           aria-hidden="true"
-          className={`w-5 h-5 transition-colors duration-200 ${
+          className={`w-4 h-4 sm:w-5 sm:h-5 transition-colors duration-200 ${
             i <= ratingValue
               ? isSelected
-                ? "text-red-500" 
-                : "text-yellow-400" 
-              : "text-gray-300" 
+                ? "text-red-500"
+                : "text-yellow-400"
+              : "text-gray-300"
           }`}
           fill="currentColor"
           viewBox="0 0 20 20"
