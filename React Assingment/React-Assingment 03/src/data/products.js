@@ -7,6 +7,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 900,
     category: "Kids",
+    sizes: ["S", "M", "L"],
     rating: 3,
   },
   {
@@ -17,6 +18,8 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 400,
     category: "Men",
+    sizes: ["S", "M", "L"],
+
     rating: 5,
   },
   {
@@ -27,6 +30,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 1100,
     category: "Women",
+    sizes: ["S", "M", "L"],
     rating: 2,
   },
   {
@@ -37,6 +41,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 100,
     category: "Men",
+    sizes: ["S", "M", "L"],
     rating: 4,
   },
   {
@@ -47,6 +52,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 600,
     category: "Kids",
+    sizes: ["S", "M", "L"],
     rating: 4,
   },
   {
@@ -57,6 +63,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 500,
     category: "Women",
+    sizes: ["S", "M", "L"],
     rating: 2,
   },
   {
@@ -67,6 +74,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 300,
     category: "Kids",
+    sizes: ["S", "M", "L"],
     rating: 2,
   },
   {
@@ -77,6 +85,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 1200,
     category: "Kids",
+    sizes: ["S", "M", "L"],
     rating: 1,
   },
   {
@@ -87,6 +96,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 1000,
     category: "Men",
+    sizes: ["S", "M", "L"],
     rating: 1,
   },
   {
@@ -97,6 +107,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 200,
     category: "Women",
+    sizes: ["S", "M", "L"],
     rating: 5,
   },
   {
@@ -107,6 +118,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 800,
     category: "Women",
+    sizes: ["S", "M", "L"],
     rating: 3,
   },
   {
@@ -117,6 +129,7 @@ export const products = [
       "A lightweight pullover shirt with a round neckline and short sleeves, worn as an outerwear.",
     price: 700,
     category: "Men",
+    sizes: ["S", "M", "L"],
     rating: 3,
   },
 ];
