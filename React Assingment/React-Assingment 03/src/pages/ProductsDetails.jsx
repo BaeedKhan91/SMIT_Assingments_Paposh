@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router";
 import { products } from "../data/products";
+import { cartContext } from "../Context/CartContext";
 
 function ProductsDetails() {
+  const [quantity,setQuantity] =useState(1)
+  const {addToCart} = useContext(cartContext);
+  const [size,setSize] =  useState('');
+  
+  
   const params = useParams();
   let visibleProduct = [...products];
 
   visibleProduct = visibleProduct.find((product) => product.id === +params.id);
-  console.log(visibleProduct);
 
-  console.log(params);
+
+
 
   return (
     <div className=" pt-10 transition-opacity ease-in duration-500 opacity-100">
@@ -60,18 +66,25 @@ function ProductsDetails() {
           <div className="flex flex-col gap-4 my-8">
             <p>Select Size</p>
             <div className="flex gap-2 flex-wrap">
-              {visibleProduct.sizes.map((size, idx) => (
+              {visibleProduct.sizes.map((item, idx) => (
                 <button
+                onClick={()=>setSize(item)}
                   key={idx}
-                  className="border py-2 px-4 bg-gray-100 cursor-pointer hover:bg-gray-200 transition"
+                  className={`border py-2 px-4 bg-gray-100 cursor-pointer hover:bg-gray-200 transition  ${item === size ?'border-orange-500': ''}`}
                 >
-                  {size}
+                  {item}
+                 
                 </button>
               ))}
             </div>
           </div>
+          <div className="flex gap-3 items-center mb-3">
+            <button className="border py-1.5 font-bold px-3 cursor-pointer  rounded-lg hover:bg-gray-200 transition border-gray-900 text-lg" onClick={()=>quantity===1 ? "" : setQuantity(quantity-1)}>-</button>
+            <p className="text-xl font-bold">{quantity}</p>
+            <button className="border py-1.5 font-bold px-3 cursor-pointer  rounded-lg hover:bg-gray-200 transition border-gray-900 text-lg" onClick={()=> setQuantity(quantity+1)}>+</button>
+          </div>
 
-          <button onClick={()=>alert("Successfully Added to Cart")} className="bg-black text-white px-8 py-3 active:bg-gray-700 cursor-pointer transition">
+          <button onClick={()=>addToCart(visibleProduct,quantity,size)} className="bg-black text-white px-8 py-3 active:bg-gray-700 cursor-pointer transition">
             ADD TO CART
           </button>
 

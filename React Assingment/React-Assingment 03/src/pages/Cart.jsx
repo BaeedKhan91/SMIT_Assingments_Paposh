@@ -1,9 +1,68 @@
-
+import { useContext } from "react";
+import { cartContext } from "../Context/CartContext";
+import { Link } from "react-router";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import Title from "../components/Title";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Cart() {
+  const { cartItems } = useContext(cartContext);
+
+  console.log("Cartitems--->", cartItems);
+
   return (
-    <div>Cart</div>
-  )
+    <>
+      <div className=" pt-14 ">
+        <div className="text-2xl mb-3 ">
+          <Title text1={"YOUR"} text2={"CART"} />
+        </div>
+        <div>
+          {cartItems.map((item, index) => {
+            // const item = products.find((product) => product._id === item._id);
+            return (
+              <div
+                className="py-4 border-b text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
+                key={index}
+              >
+                <div className="flex items-start gap-6">
+                  <img src={item.image} className="w-16 sm:w-20" alt="" />
+                  <div>
+                    <p className="text-sm sm:text-lg font-medium ">
+                      {item.title}
+                    </p>
+                    <div className="flex items-center gap-5 mt-2">
+                      <p>$ {item.price}</p>
+                      <p className="px-2 sm:px-3 border bg-slate-50">S</p>
+                    </div>
+                  </div>
+                </div>
+                <input
+                  type="number"
+                  min={1}
+                  defaultValue={1}
+                  value={item.quantity}
+                  onChange={(e)=> console.log(e.target.value)
+                  }
+                  className="border max-w-20 px-1 sm:px2 py-1"
+                />
+                <FontAwesomeIcon icon={faTrash} className="cursor-pointer" />
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex justify-end my-20">
+          <div className="w-full sm:w-[450px]">
+            {/* <CartTotal /> */} Cart Total
+            <div className="w-full text-end ">
+              <button className="bg-black text-white text-sm my-8 px-8 py-3">
+                PROCEED TO CHECKOUT
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Cart
+export default Cart;
