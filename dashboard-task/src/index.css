@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+.true {
+  --bg-main: #f1f5f9;
+  --bg-card: #d8d7d7;
+  --bg-sidebar: #ffffff;
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --accent: #3b82f6;
+}
+
+/* DARK THEME */
+.false {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --bg-sidebar: #0f172a;
+  --text-main: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --accent: #3b82f6;
+}
