@@ -9,7 +9,7 @@ export default function App() {
   const hobbies = ["Coding", "Cricket", "Gaming", "Traveling", "Reading"];
 
   return (
-    <div className={`${theme} flex relative`}>
+    <div className={`${theme} flex`}>
       <Sidebar theme={theme} setTheme={setTheme}/>
      
 

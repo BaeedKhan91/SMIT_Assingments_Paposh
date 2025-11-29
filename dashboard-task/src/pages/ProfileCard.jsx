@@ -9,14 +9,14 @@ export default function ProfileCard() {
     <div className="flex-1 min-h-screen p-6 bg-(--bg-main) text-(--text-main)">
       <div
         className=" mt-8 relative w-full h-64 rounded-xl shadow-md bg-cover bg-center"
-        style={{ backgroundImage: "url('./src/assets/images/banner.png')" }}
+        style={{ backgroundImage: "url('./images/banner.png')" }}
       >
         <div className="absolute inset-0 bg-black/10"></div>
 
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-90px]">
           <div className="w-48 h-48 rounded-full border-4 border-(--bg-card) shadow-xl overflow-hidden bg-(--bg-card)">
             <img
-              src="./src/assets/images/profile.jpg"
+              src="./images/profile.jpg"
               className="w-full h-full object-cover"
             />
           </div>
